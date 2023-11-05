@@ -8,6 +8,9 @@ import AuthProvider from "./components/Provider/Provider";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import Error404 from "./components/Error404/Error404";
+import Profile from "./components/Profile/Profile";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import Blogs from "./components/Blogs/Blogs";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +27,24 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/profile",
+
+        element: (
+          <PrivateRoute>
+            <Profile></Profile>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/blogs",
+
+        element: (
+          <PrivateRoute>
+            <Blogs></Blogs>
+          </PrivateRoute>
+        ),
       },
     ],
   },
