@@ -10,6 +10,7 @@ import Register from "./components/Register/Register";
 import Error404 from "./components/Error404/Error404";
 import Profile from "./components/Profile/Profile";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import Addjob from "./components/Addjob/Addjob";
 import Blogs from "./components/Blogs/Blogs";
 const router = createBrowserRouter([
   {
@@ -34,6 +35,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <Profile></Profile>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/addjob",
+        element: (
+          <PrivateRoute>
+            <Addjob></Addjob>
           </PrivateRoute>
         ),
       },
