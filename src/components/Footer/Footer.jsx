@@ -11,9 +11,9 @@ const Footer = () => {
           ></img>
           <p className="font-bold text-center ">
             <span className="text-[#EAA334] text-2xl">JOB HUNT </span> <br />
-            
-           <div>Providing reliable Service since 2012</div> <div>Ramna,Dhaka</div><div>Contact Us : +8801938795192</div>
-            
+            <div>Providing reliable Service since 2012</div>{" "}
+            <div>Ramna,Dhaka</div>
+            <div>Contact Us : +8801938795192</div>
           </p>
           <p>Copyright © 2023 - All right reserved</p>
         </aside>
