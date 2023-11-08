@@ -29,8 +29,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/alljob",
-        loader: () =>
-          fetch("https://job-server-4tnkhvd8a-rahads-projects.vercel.app/job"),
+        loader: () => fetch("https://job-server-beryl.vercel.app/job"),
         element: <Alljob></Alljob>,
       },
       {
@@ -52,8 +51,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/myjobs",
-        loader: () =>
-          fetch("https://job-server-4tnkhvd8a-rahads-projects.vercel.app/job"),
+        loader: () => fetch("https://job-server-beryl.vercel.app/job"),
         element: (
           <PrivateRoute>
             <Myjob></Myjob>
@@ -62,8 +60,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/jobdetails/:_id",
-        loader: () =>
-          fetch("https://job-server-4tnkhvd8a-rahads-projects.vercel.app/job"),
+        loader: () => fetch("https://job-server-beryl.vercel.app/job"),
         element: (
           <PrivateRoute>
             <Details></Details>
@@ -72,10 +69,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/appliedjob",
-        loader: () =>
-          fetch(
-            "https://job-server-4tnkhvd8a-rahads-projects.vercel.app/appjob"
-          ),
+        loader: () => fetch("https://job-server-beryl.vercel.app/appjob"),
         element: (
           <PrivateRoute>
             <Appliedjob></Appliedjob>
@@ -93,9 +87,7 @@ const router = createBrowserRouter([
       {
         path: "/updatejob/:id",
         loader: ({ params }) =>
-          fetch(
-            `https://job-server-4tnkhvd8a-rahads-projects.vercel.app/job/${params.id}`
-          ),
+          fetch(`https://job-server-beryl.vercel.app/job/${params.id}`),
         element: (
           <PrivateRoute>
             <Update></Update>

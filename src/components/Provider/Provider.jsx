@@ -70,25 +70,17 @@ const AuthProvider = ({ children }) => {
       // jwt
       if (currentUser) {
         axios
-          .post(
-            "https://job-server-4tnkhvd8a-rahads-projects.vercel.app/jwt",
-            loggedUser,
-            {
-              withCredentials: true,
-            }
-          )
+          .post("https://job-server-beryl.vercel.app/jwt", loggedUser, {
+            withCredentials: true,
+          })
           .then((res) => {
             console.log("token response", res.data);
           });
       } else {
         axios
-          .post(
-            "https://job-server-4tnkhvd8a-rahads-projects.vercel.app/logout",
-            loggedUser,
-            {
-              withCredentials: true,
-            }
-          )
+          .post("https://job-server-beryl.vercel.app/logout", loggedUser, {
+            withCredentials: true,
+          })
           .then((res) => {
             console.log(res.data);
           });

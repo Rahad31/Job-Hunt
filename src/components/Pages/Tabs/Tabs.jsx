@@ -2,10 +2,10 @@ import React from "react";
 
 import { useEffect, useState } from "react";
 const Tabs = () => {
-  const Job = [];
+  let Job = [];
   const [jobs, setjobs] = useState([]);
   useEffect(() => {
-    fetch("https://job-server-4tnkhvd8a-rahads-projects.vercel.app/job")
+    fetch("https://job-server-beryl.vercel.app/job")
       .then((res) => res.json())
       .then((data) => setjobs(data));
   }, []);

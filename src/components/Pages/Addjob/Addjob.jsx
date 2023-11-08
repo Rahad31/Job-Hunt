@@ -30,7 +30,7 @@ const Addjob = () => {
     console.log(newjob);
     form.reset();
     // send data
-    fetch(`https://job-server-4tnkhvd8a-rahads-projects.vercel.app/job`, {
+    fetch(`https://job-server-beryl.vercel.app/job`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

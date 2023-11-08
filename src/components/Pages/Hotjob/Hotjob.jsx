@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 const Employer = () => {
   const [jobs, setjobs] = useState([]);
   useEffect(() => {
-    fetch("https://job-server-4tnkhvd8a-rahads-projects.vercel.app/job")
+    fetch("https://job-server-beryl.vercel.app/job")
       .then((res) => res.json())
       .then((data) => setjobs(data));
   }, []);
