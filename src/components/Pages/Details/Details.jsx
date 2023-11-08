@@ -33,8 +33,8 @@ const Details = () => {
       ddate,
       applicant,
     };
-    
-    fetch(`http://localhost:5000/appjob`, {
+
+    fetch(`https://job-server-4tnkhvd8a-rahads-projects.vercel.app/appjob`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

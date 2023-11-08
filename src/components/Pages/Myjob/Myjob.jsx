@@ -84,9 +84,12 @@ const Myjob = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         console.log("done");
-        fetch(`http://localhost:5000/job/${_id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://job-server-4tnkhvd8a-rahads-projects.vercel.app/job/${_id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             console.log(data);

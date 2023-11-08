@@ -55,13 +55,16 @@ const Update = () => {
     console.log(upjob);
     // form.reset();
     // send data
-    fetch(`http://localhost:5000/job/${_id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(upjob),
-    })
+    fetch(
+      `https://job-server-4tnkhvd8a-rahads-projects.vercel.app/job/${_id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(upjob),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

@@ -5,10 +5,11 @@ const Tabs = () => {
   const Job = [];
   const [jobs, setjobs] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/job")
+    fetch("https://job-server-4tnkhvd8a-rahads-projects.vercel.app/job")
       .then((res) => res.json())
       .then((data) => setjobs(data));
-  }, []); console.log("done");
+  }, []);
+  console.log("done");
 
   const [job, setjob] = useState(Job);
   const [count, setcount] = useState();
