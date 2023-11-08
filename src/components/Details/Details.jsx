@@ -3,7 +3,7 @@ import Swal from "sweetalert2/dist/sweetalert2.js";
 import "sweetalert2/src/sweetalert2.scss";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
-import { useLoaderData ,useParams,Link} from "react-router-dom";
+import { useLoaderData, useParams, Link } from "react-router-dom";
 const Details = () => {
   const jobs = useLoaderData();
   const { _id } = useParams();
@@ -17,13 +17,23 @@ const Details = () => {
     const image = jobdetail.image;
     const name = jobdetail.name;
     const pdate = jobdetail.pdate;
+    const ddate = jobdetail.ddate;
     const type = jobdetail.type;
     const price = jobdetail.price;
     const description = jobdetail.description;
     const applicant = jobdetail.applicant;
-    const cart = { image, name,  type, price, description, pdate,ddate,applicant, };
+    const cart = {
+      image,
+      name,
+      type,
+      price,
+      description,
+      pdate,
+      ddate,
+      applicant,
+    };
     console.log(cart);
-    fetch(`http://localhost:5000/job`, {
+    fetch(`http://localhost:5000/appjob`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -67,18 +77,17 @@ const Details = () => {
               <h3 className="text-center pt-2 text-[#120f0a] text-xl font-semibold">
                 Job title : {jobdetail.name}
               </h3>
-              <h3 className="text-center ml-[90px] md:ml-0 w-[200px] text-[#120f0a] text-normal font-semibold p-2">
+              <h3 className="text-center   text-[#120f0a] text-normal font-semibold pt-2">
                 Description: <br></br>
                 {jobdetail.description}
               </h3>
               <h3 className="text-center  text-[#120f0a] text font-semibold">
                 Salary Range: ${jobdetail.price}
               </h3>
-              
+
               <h3 className="text-center text-[#120f0a]  font-semibold">
                 No. of Applicant: {jobdetail.applicant}
               </h3>
-             
 
               <div className="flex justify-center items-center md:flex-grow md:mt-48">
                 {" "}
@@ -87,7 +96,7 @@ const Details = () => {
                     onClick={handleCart}
                     className="btn btn-error mx-4 mb-4"
                   >
-                   Apply
+                    Apply
                   </button>
                 </Link>
               </div>
