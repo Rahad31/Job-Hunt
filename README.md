@@ -1,8 +1,10 @@
-# React + Vite
+# Job Hunt
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features:
+1.User can add multiple job in job hunt
+2.User can update job information here
+3.If user wants he/she can delete job post
+4.User can find different type job here.
+5.No user can apply for job after deadline.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Client site live link : https://job-hunt-4b187.firebaseapp.com/

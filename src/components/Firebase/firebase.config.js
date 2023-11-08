@@ -8,13 +8,14 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCGJW3EdXlEkQWXLdut3xc2_WbB3OGmTKs",
-  authDomain: "tech-bd-7342b.firebaseapp.com",
-  projectId: "tech-bd-7342b",
-  storageBucket: "tech-bd-7342b.appspot.com",
-  messagingSenderId: "223259233124",
-  appId: "1:223259233124:web:4031d72b2f67776c434871",
+  apiKey: "AIzaSyBFq0ECHSlkfLtuLq1XBcW0utEgEgwHWgg",
+  authDomain: "job-hunt-4b187.firebaseapp.com",
+  projectId: "job-hunt-4b187",
+  storageBucket: "job-hunt-4b187.appspot.com",
+  messagingSenderId: "520108573674",
+  appId: "1:520108573674:web:dad8cf8b73fae4f0ba6893",
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
