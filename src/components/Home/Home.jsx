@@ -5,7 +5,7 @@ import Employer from "../Employer/Employer";
 import Hotjob from "../Hotjob/Hotjob"
 const Home = () => {
   return (
-    <div>
+    <div className="px-4 md:px-0">
       <Banner></Banner>
       <Tabs></Tabs>
       <Hotjob></Hotjob>
