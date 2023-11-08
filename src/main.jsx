@@ -14,6 +14,7 @@ import Addjob from "./components/Addjob/Addjob";
 import Blogs from "./components/Blogs/Blogs";
 import Myjob from "./components/Myjob/Myjob";
 import Update from "./components/Update/Update";
+import Alljob from "./components/Alljob/Alljob";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/alljob",
+        loader: () => fetch("http://localhost:5000/job"),
+        element: <Alljob></Alljob>,
       },
       {
         path: "/login",
@@ -46,6 +52,15 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <Myjob></Myjob>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/Details/:_id",
+        loader: () => fetch("http://localhost:5000/job"),
+        element: (
+          <PrivateRoute>
+            <Details></Details>
           </PrivateRoute>
         ),
       },
