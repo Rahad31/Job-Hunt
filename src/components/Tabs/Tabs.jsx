@@ -8,17 +8,17 @@ const Tabs = () => {
     fetch("http://localhost:5000/job")
       .then((res) => res.json())
       .then((data) => setjobs(data));
-  }, []);
+  }, []); console.log("done");
 
-  const [job,setjob]=useState(Job)
-  const [count,setcount]=useState()
-  const handlesearch = (id) => 
-
-  {
+  const [job, setjob] = useState(Job);
+  const [count, setcount] = useState();
+  const handlesearch = (id) => {
     console.log("done");
     console.log(id);
     if (id == 1) {
+      console.log("done");
       Job = jobs.filter((job) => job.type == "On Site Job");
+      console.log(Job);
     } else if (id == 2) {
       Job = jobs.filter((job) => job.type == "Remote Job");
     } else if (id == 3) {
@@ -26,7 +26,7 @@ const Tabs = () => {
     } else if (id == 4) {
       Job = jobs.filter((job) => job.type == "Part Time");
     }
-  }
+  };
 
   return (
     <div className="flex flex-col justify-center items-center gap-2 my-6">
@@ -47,7 +47,7 @@ const Tabs = () => {
         </button>
       </div>
       <hr></hr>
-      {Job.map((jobs) => (
+      {job.map((jobs) => (
         <Tabcart jobs={jobs}></Tabcart>
       ))}
     </div>
