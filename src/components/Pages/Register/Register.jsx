@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 
-import { AuthContext } from "../Provider/Provider";
+import { AuthContext } from "../../Provider/Provider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 //  <ToastContainer />;

@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { AuthContext } from "../Provider/Provider";
+import { AuthContext } from "../../Provider/Provider";
 import { Helmet } from "react-helmet-async";
 const Profile = () => {
   const { user } = useContext(AuthContext);

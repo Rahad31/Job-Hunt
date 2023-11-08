@@ -2,21 +2,21 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./components/Home/Home";
-import Root from "./components/Root/Root";
+import Home from "./components/Pages/Home/Home";
+import Root from "./components/Layout/Root/Root";
 import AuthProvider from "./components/Provider/Provider";
-import Login from "./components/Login/Login";
-import Register from "./components/Register/Register";
-import Error404 from "./components/Error404/Error404";
-import Profile from "./components/Profile/Profile";
-import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
-import Addjob from "./components/Addjob/Addjob";
-import Blogs from "./components/Blogs/Blogs";
-import Myjob from "./components/Myjob/Myjob";
-import Update from "./components/Update/Update";
-import Alljob from "./components/Alljob/Alljob";
-import Details from "./components/Details/Details";
-import Appliedjob from "./components/Appliedjob/Appliedjob";
+import Login from "./components/Pages/Login/Login";
+import Register from "./components/Pages/Register/Register";
+import Error404 from "./components/Pages/Error404/Error404";
+import Profile from "./components/Pages/Profile/Profile";
+import PrivateRoute from "./components/Route/PrivateRoute/PrivateRoute";
+import Addjob from "./components/Pages/Addjob/Addjob";
+import Blogs from "./components/Pages/Blogs/Blogs";
+import Myjob from "./components/Pages/Myjob/Myjob";
+import Update from "./components/Pages/Update/Update";
+import Alljob from "./components/Pages/Alljob/Alljob";
+import Details from "./components/Pages/Details/Details";
+import Appliedjob from "./components/Pages/Appliedjob/Appliedjob";
 import { HelmetProvider } from "react-helmet-async";
 const router = createBrowserRouter([
   {
@@ -113,8 +113,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
-       <HelmetProvider><RouterProvider router={router} /></HelmetProvider>
-      
+      <HelmetProvider>
+        <RouterProvider router={router} />
+      </HelmetProvider>
     </AuthProvider>
   </React.StrictMode>
 );
