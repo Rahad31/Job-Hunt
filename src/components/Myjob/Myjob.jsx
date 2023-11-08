@@ -6,6 +6,7 @@ import DataTable from "react-data-table-component";
 import Swal from "sweetalert2/dist/sweetalert2.js";
 import { Link } from "react-router-dom";
 import "sweetalert2/src/sweetalert2.scss";
+import { Helmet } from "react-helmet-async";
 const Myjob = () => {
   // const loadedUsers = useLoaderData();
   // const [users, setUsers] = useState(loadedUsers);
@@ -123,6 +124,9 @@ const Myjob = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Job Hunt | My Job</title>
+      </Helmet>
       <div>
         <h1 className="text-4xl font-bold text-center underline">My Jobs</h1>
         <div className="container mx-auto gap-20 my-4 flex flex-row justify-center items-center">
@@ -165,10 +169,7 @@ const Myjob = () => {
                         X
                       </button>
                       <Link to={`/updatejob/${job._id}`}>
-                        <button className="btn btn-error mx-4">
-                          {" "}
-                          Update
-                        </button>
+                        <button className="btn btn-error mx-4"> Update</button>
                       </Link>
                     </div>
                   </td>

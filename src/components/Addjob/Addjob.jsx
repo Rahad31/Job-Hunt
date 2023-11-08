@@ -1,7 +1,7 @@
 import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import { Helmet } from "react-helmet-async";
 const Addjob = () => {
   const handleAddjob = (event) => {
     event.preventDefault();
@@ -48,6 +48,9 @@ const Addjob = () => {
 
   return (
     <div className="container mx-auto flex justify-center items-center p-2">
+      <Helmet>
+        <title>Job Hunt | Add Job</title>
+      </Helmet>
       <form
         onSubmit={handleAddjob}
         className="flex flex-col  justify-center items-center bg-slate-200  border-2 border-black w-fit rounded-md lg:w-[800px]"

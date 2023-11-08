@@ -1,11 +1,15 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 const Alljob = () => {
 
     const job=useLoaderData();
     return (
       <div>
+        <Helmet>
+          <title>Job Hunt | All job</title>
+        </Helmet>
         <div className="flex flex-col justify-center items-center">
           <h1 className="text-4xl font-bold text-center underline">My Jobs</h1>
           <div className="container mx-auto gap-20 my-4 flex flex-row justify-center items-center">

@@ -1,8 +1,11 @@
 import React from "react";
-
+import { Helmet } from "react-helmet-async";
 const Blogs = () => {
   return (
     <div className="flex flex-col justify-center items-center container mx-auto gap-4 my-4">
+      <Helmet>
+        <title>Job Hunt | Blog</title>
+      </Helmet>
       <div className="bg-[#daf7fe] rounded-md p-4">
         <h1 className="text-2xl font-bold text-center mb-4">Access Token</h1>
         <hr></hr>

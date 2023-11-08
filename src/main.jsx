@@ -17,6 +17,7 @@ import Update from "./components/Update/Update";
 import Alljob from "./components/Alljob/Alljob";
 import Details from "./components/Details/Details";
 import Appliedjob from "./components/Appliedjob/Appliedjob";
+import { HelmetProvider } from "react-helmet-async";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -112,7 +113,8 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
-      <RouterProvider router={router} />
+       <HelmetProvider><RouterProvider router={router} /></HelmetProvider>
+      
     </AuthProvider>
   </React.StrictMode>
 );
