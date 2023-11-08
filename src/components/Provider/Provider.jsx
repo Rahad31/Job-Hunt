@@ -9,7 +9,7 @@ import {
 } from "firebase/auth";
 
 import { createContext, useEffect, useState } from "react";
-import auth from "../../Firebase/firebase.config";
+import auth from "../Firebase/firebase.config";
 import { ToastContainer, toast } from "react-toastify";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
