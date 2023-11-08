@@ -14,11 +14,16 @@ const Employer = () => {
     <div className="container mx-auto text-center my-10">
       <h1 className="text-4xl font-bold  mb-4 text-[#EAA334]">HOT JOB</h1>
       <hr className="mb-6"></hr>
-      <Marquee>
-        {jobs.map((job) => (
-          <Jobcart job={job}></Jobcart>
-        ))}
-      </Marquee>
+      
+        <Marquee>
+          <div className="flex gap-4">
+          {jobs.map((job) => (
+            <Jobcart job={job}></Jobcart>
+          ))}
+          </div>
+        </Marquee>
+      
+
       <hr className="mt-6"></hr>
     </div>
   );

@@ -13,7 +13,7 @@ const Details = () => {
   const handleCart = () => {
     // savejob(idInt, User);
     // // toast("Successfully Added to Cart");
-
+    console.log(Date.now());
     const image = jobdetail.image;
     const name = jobdetail.name;
     const pdate = jobdetail.pdate;
@@ -22,6 +22,7 @@ const Details = () => {
     const price = jobdetail.price;
     const description = jobdetail.description;
     const applicant = jobdetail.applicant;
+
     const cart = {
       image,
       name,
@@ -32,7 +33,7 @@ const Details = () => {
       ddate,
       applicant,
     };
-    console.log(cart);
+    
     fetch(`http://localhost:5000/appjob`, {
       method: "POST",
       headers: {

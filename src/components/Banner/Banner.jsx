@@ -9,7 +9,7 @@ const Banner = () => {
       ></img>
       <div className=" flex flex-col gap-2 italic absolute top-[400px] right-[50px] md:top-[320px] md:right-[230px] lg:top-[300px] lg:right-[820px]">
         <div className="text-6xl font-bold">
-          <span className="text-[]  ">JOB</span> HUNT
+          <span className="text-[#EAA334]  ">JOB HUNT</span>
         </div>
         <h1 className="text-2xl text-">Discover Your Dream Job Today!</h1>
         <label class="input-group">
@@ -26,7 +26,6 @@ const Banner = () => {
             Search
           </button>
         </label>
-      
       </div>
     </div>
   );
