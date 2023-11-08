@@ -1,13 +1,12 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import Allcart from '../Allcart/Allcart';
 import { Link } from 'react-router-dom';
 const Alljob = () => {
 
     const job=useLoaderData();
     return (
       <div>
-        <div className='flex flex-col justify-center items-center'>
+        <div className="flex flex-col justify-center items-center">
           <h1 className="text-4xl font-bold text-center underline">My Jobs</h1>
           <div className="container mx-auto gap-20 my-4 flex flex-row justify-center items-center">
             <table className="table flex justify-center items-center gap-2 w-[1000px] ">
@@ -34,7 +33,7 @@ const Alljob = () => {
                     <td>
                       {" "}
                       <div className="flex gap-2">
-                        <Link to={`/jobdetails`}>
+                        <Link to={`/jobdetails/${job._id}`}>
                           {" "}
                           <button
                             onClick={() => handleDtails(job._id)}
@@ -42,7 +41,6 @@ const Alljob = () => {
                           >
                             Details
                           </button>
-                          
                         </Link>
                       </div>
                     </td>

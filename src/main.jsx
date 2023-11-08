@@ -15,6 +15,7 @@ import Blogs from "./components/Blogs/Blogs";
 import Myjob from "./components/Myjob/Myjob";
 import Update from "./components/Update/Update";
 import Alljob from "./components/Alljob/Alljob";
+import Details from "./components/Details/Details";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -56,7 +57,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/Details/:_id",
+        path: "/jobdetails/:_id",
         loader: () => fetch("http://localhost:5000/job"),
         element: (
           <PrivateRoute>
