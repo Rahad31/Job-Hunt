@@ -9,7 +9,14 @@ const Profile = () => {
       <Helmet>
         <title>Job Hunt | Profile</title>
       </Helmet>
-      <img className=" w-[300px] rounded-md" src={user.photoURL}></img>
+      <span
+        className="tooltip tooltip-bottom"
+        data-tip={user.displayName ? user.displayName : "no name"}
+      >
+        {" "}
+        <img className=" w-[300px] rounded-md" src={user.photoURL}></img>
+      </span>
+
       <h1 className="text-2xl font-semibold">{user.displayName}</h1>
       <h3>{user.email}</h3>
     </div>

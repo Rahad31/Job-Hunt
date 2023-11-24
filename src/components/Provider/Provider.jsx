@@ -62,29 +62,9 @@ const AuthProvider = ({ children }) => {
   // observe auth state change
   useEffect(() => {
     const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
-      const userEmail = currentUser?.email || user?.email;
-      const loggedUser = { email: userEmail };
       console.log("Current value of the current user", currentUser);
       setUser(currentUser);
       setLoading(false);
-      // jwt
-      if (currentUser) {
-        axios
-          .post("https://job-server-beryl.vercel.app/jwt", loggedUser, {
-            withCredentials: true,
-          })
-          .then((res) => {
-            console.log("token response", res.data);
-          });
-      } else {
-        axios
-          .post("https://job-server-beryl.vercel.app/logout", loggedUser, {
-            withCredentials: true,
-          })
-          .then((res) => {
-            console.log(res.data);
-          });
-      }
     });
     return () => {
       unSubscribe();

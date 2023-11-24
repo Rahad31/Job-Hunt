@@ -11,12 +11,12 @@ const Employer = () => {
       .then((data) => setjobs(data));
   }, []);
   return (
-    <div className="container mx-auto text-center my-10">
+    <div className="container mx-auto text-center my-20">
       <h1 className="text-4xl font-bold  mb-4 text-[#EAA334]">HOT JOB</h1>
       <hr className="mb-6"></hr>
 
       <Marquee>
-        <div className="flex gap-4">
+        <div className="flex  pr-2 gap-4">
           {jobs.map((job) => (
             <Jobcart job={job}></Jobcart>
           ))}

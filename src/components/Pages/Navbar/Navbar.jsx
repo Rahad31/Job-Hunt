@@ -132,13 +132,16 @@ const Navbar = () => {
           </div>
           {user ? (
             <>
-              <span>
+              <span
+                className="tooltip tooltip-bottom"
+                data-tip={user.displayName ? user.displayName : "no name"}
+              >
                 <img
                   className="w-[35px] h-[35px] rounded-full"
                   src={user.photoURL}
                 ></img>
               </span>
-              <span>{user.displayName}</span>
+              
               <a onClick={handleLogOut} className="btn btn-sm">
                 Sign out
               </a>

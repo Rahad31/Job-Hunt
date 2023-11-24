@@ -6,13 +6,13 @@ const Appcart = ({ job }) => {
   return (
     <div>
       <div className="flex justify-center items-center   rounded-md ">
-        <div className="h-[320px] w-[450px] rounded-md flex flex-row gap-2 border-2 border-black  bg-slate-200">
+        <div className="h-[320px] w-[500px] rounded-md flex flex-row gap-2 border-2 border-black  bg-slate-200">
           <img
             src={image}
             className="h-[300px] w-[180px] m-2 rounded-md p-2 bg-white"
           ></img>
-          <div className="flex flex-col gap-2 ">
-            <h3 className="text-center pt-2 text-[#120f0a] text-xl font-semibold">
+          <div className="flex flex-col gap-2  p-4">
+            <h3 className="text-center  text-[#120f0a] text-xl font-semibold">
               Job Title : {name}
             </h3>
             <h3 className="text-center pt-2text-[#120f0a] text-xl font-semibold">

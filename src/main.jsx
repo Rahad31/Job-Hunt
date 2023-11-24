@@ -98,9 +98,9 @@ const router = createBrowserRouter([
         path: "/blogs",
 
         element: (
-          <PrivateRoute>
+         
             <Blogs></Blogs>
-          </PrivateRoute>
+         
         ),
       },
     ],

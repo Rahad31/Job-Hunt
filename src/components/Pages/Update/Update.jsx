@@ -4,6 +4,7 @@ import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2/dist/sweetalert2.js";
 import "sweetalert2/src/sweetalert2.scss";
+import { Helmet } from "react-helmet-async";
 //  Swal.fire({
 //    position: "center",
 //    icon: "success",
@@ -80,6 +81,9 @@ const Update = () => {
 
   return (
     <div className="container mx-auto flex justify-center items-center p-2">
+      <Helmet>
+        <title>Job Hunt | Update</title>
+      </Helmet>
       <form
         onSubmit={handleupjob}
         className="flex flex-col  justify-center items-center bg-slate-200  border-2 border-black w-fit rounded-md lg:w-[800px]"
